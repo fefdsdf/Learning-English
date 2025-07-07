@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Урок A1 — Present Simple</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1>Урок A1 — Present Simple</h1>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/e1eHCJ2ZptE"
+    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+
+  <h2>Тест</h2>
+  <form id="quizForm">
+    <p>1. He ___ to school every day.<br>
+      <input type="radio" name="q1" value="go"> go<br>
+      <input type="radio" name="q1" value="goes"> goes
+    </p>
+    <p>2. I ___ pizza on Fridays.<br>
+      <input type="radio" name="q2" value="eat"> eat<br>
+      <input type="radio" name="q2" value="eats"> eats
+    </p>
+    <p>3. They ___ football every weekend.<br>
+      <input type="radio" name="q3" value="play"> play<br>
+      <input type="radio" name="q3" value="plays"> plays
+    </p>
+    <button type="button" onclick="checkQuiz()">Проверить</button>
+  </form>
+  <p id="result"></p>
+  <script>
+    function checkQuiz() {
+      const answers = { q1: "goes", q2: "eat", q3: "play" };
+      let score = 0;
+      for (let q in answers) {
+        const selected = document.querySelector('input[name=' + q + ']:checked');
+        if (selected && selected.value === answers[q]) score++;
+      }
+      document.getElementById("result").innerText = "Правильных ответов: " + score + " из 3";
+    }
+  </script>
+</body>
+</html>
