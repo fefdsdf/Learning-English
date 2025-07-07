@@ -1,0 +1,23 @@
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f2f2f2;
+  color: #333;
+}
+h1 {
+  text-align: center;
+}
+.lang-switch {
+  text-align: right;
+  margin-bottom: 15px;
+}
+.levels {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.levels li {
+  margin: 10px;
+  font-size: 1.2em;
+}
