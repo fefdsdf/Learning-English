@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn English</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 data-en="Learn English" data-ru="Изучай английский">Изучай английский</h1>
+      <div class="controls">
+        <button onclick="toggleTheme()">🌙 / ☀️</button>
+        <select id="langSwitcher" onchange="switchLanguage()">
+          <option value="ru">Русский</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2 data-en="About Us" data-ru="О нас">О нас</h2>
+      <p data-en="We help you learn English quickly and effectively." data-ru="Мы помогаем изучать английский быстро и эффективно.">
+        Мы помогаем изучать английский быстро и эффективно.
+      </p>
+      <button data-en="Learn More" data-ru="Подробнее">Подробнее</button>
+    </section>
+
+    <section>
+      <h2 data-en="Contact" data-ru="Контакты">Контакты</h2>
+      <p data-en="Email us at: hello@example.com" data-ru="Пишите на email: hello@example.com">
+        Пишите на email: hello@example.com
+      </p>
+      <button data-en="Contact Us" data-ru="Связаться">Связаться</button>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p data-en="© 2025 Learn English" data-ru="© 2025 Изучай английский">© 2025 Изучай английский</p>
+  </footer>
+
+  <script>
+    function switchLanguage() {
+      const lang = document.getElementById("langSwitcher").value;
+      document.querySelectorAll("[data-en]").forEach(el => {
+        el.textContent = el.getAttribute("data-" + lang);
+      });
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+</body>
+</html>
