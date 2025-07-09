@@ -1,0 +1,96 @@
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --primary: #4a90e2;
+  --secondary: #ffb400;
+  --card-bg: #f9f9f9;
+  --hover: #e0e0e0;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --card-bg: #1f1f1f;
+  --hover: #333;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.3s ease;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--card-bg);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--hover);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+#theme-toggle {
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.levels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text);
+  transition: background-color 0.3s;
+}
+
+.card:hover {
+  background-color: var(--hover);
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.button.feature {
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.button.feature:hover {
+  background-color: var(--secondary);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--hover);
+}
