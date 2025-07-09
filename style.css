@@ -1,0 +1,110 @@
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --primary: #6c63ff;
+  --accent: #ffb400;
+  --btn-bg: #f0f0f0;
+  --btn-hover: #e0e0e0;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --btn-bg: #1f1f1f;
+  --btn-hover: #333;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--btn-bg);
+  border-bottom: 1px solid var(--btn-hover);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.auth-buttons .btn {
+  margin-left: 1rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: var(--btn-bg);
+  color: var(--text);
+  transition: background-color 0.3s;
+}
+
+.auth-buttons .btn:hover {
+  background-color: var(--btn-hover);
+}
+
+.auth-buttons .btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.start-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  background-color: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.start-button:hover {
+  background-color: var(--primary);
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--btn-bg);
+}
+
+.feature h2 {
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  margin-top: 0;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background-color: var(--btn-bg);
+  border-top: 1px solid var(--btn-hover);
+}
